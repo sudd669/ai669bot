@@ -1,4 +1,4 @@
-from aiogram import Dispatcher, Bot, types, executor
+from aiogram import Dispatcher, Bot, types
 from config import TELEGRAM_BOT_TOKEN
 from random import shuffle
 
@@ -15,5 +15,3 @@ async def start(message: types.Message):
     shuffle(predict)
     await message.answer(f"{message.from_user.full_name}, {predict[0]}. Приходи ещё!")
 
-#if __name__ == '__main__':
-#    executor.start_polling(dp, skip_updates=True)
